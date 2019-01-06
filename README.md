@@ -1,6 +1,9 @@
 # vue-drag-selector
 基于Vue.js的框选组件
 
+# DEMO
+[View Demo](https://xubaifucode.github.io/vue-drag-selector/example/demo.html)
+
 # USAGE
 ```jsx
 <template>
