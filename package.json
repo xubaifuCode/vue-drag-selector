@@ -1,17 +1,24 @@
 {
   "name": "vue-drag-selector",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "keywords": [
+    "vue",
+    "drag",
+    "selector"
+  ],
+  "description": "A simple vue drag selector",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name dragSelector src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-babel": "^3.2.2",
     "@vue/cli-plugin-eslint": "^3.0.3",
     "@vue/cli-service": "^3.0.3",
     "vue-template-compiler": "^2.5.17"

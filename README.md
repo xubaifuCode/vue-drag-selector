@@ -1,21 +1,40 @@
 # vue-drag-selector
+基于Vue.js的框选组件
 
-## Project setup
-```
-npm install
-```
+# USAGE
+```jsx
+<template>
+    <div>
+        <drag-selector v-model="checkedList"
+                       @change="handleDragSelectorChange" class="drag-selector">
+            <drag-selector-item v-for="(item, index) in myDragList"
+                                :value="item"
+                                :key="index" class="drag-selector__item">
+                {{ item }}
+            </drag-selector-item>
+        </drag-selector>
+        {{ checkedList }}
+    </div>
+</template>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+<script>
+  export default {
+    name: "app",
+    data() {
+      return {
+        checkedList: [],
+        myDragList: [
+          { a: 1, b: 5 },
+          { a: 2, b: 6 },
+          { a: 3, b: 7 }
+        ]
+      };
+    },
+    methods: {
+      handleDragSelectorChange(checkedList) {
+        console.log(checkedList);
+      }
+    }
+  };
+</script>
 ```
