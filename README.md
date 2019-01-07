@@ -1,10 +1,22 @@
-# vue-drag-selector
+# Vue-Drag-Selector
 基于Vue.js的框选组件
 
-# DEMO
+# 示例（Demo）
 [View Demo](https://xubaifucode.github.io/vue-drag-selector/example/demo.html)
 
-# USAGE
+# 安装（install）
+```
+npm i vue-drag-selector
+```
+
+# 引入（import）
+```vue
+// main.js
+import VueDragSelector from "vue-drag-selector";
+Vue.use(VueDragSelector);
+```
+
+# 用法（Usage）
 ```jsx
 <template>
     <div>
