@@ -3,11 +3,20 @@
   "version": "0.1.0",
   "main": "./src/index.js",
   "private": false,
+  "homepage": "https://github.com/xubaifuCode/vue-drag-selector",
+  "bugs": {
+    "url": "https://github.com/xubaifuCode/vue-drag-selector/issues",
+    "email": "xubaifu97@gmail.com"
+  },
   "keywords": [
     "vue",
     "drag",
     "selector"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xubaifuCode/vue-drag-selector.git"
+  },
   "description": "A simple vue drag selector",
   "license": "MIT",
   "scripts": {
