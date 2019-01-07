@@ -1,7 +1,7 @@
 {
   "name": "vue-drag-selector",
-  "version": "0.1.1",
-  "main": "./src/index.js",
+  "version": "0.1.2",
+  "main": "./dist/DragSelector.umd.min",
   "private": false,
   "homepage": "https://github.com/xubaifuCode/vue-drag-selector",
   "bugs": {
@@ -21,7 +21,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name dragSelector src/index.js",
+    "build-lib": "vue-cli-service build --target lib --name DragSelector src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

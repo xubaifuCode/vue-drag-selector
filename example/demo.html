@@ -32,8 +32,7 @@
     </style>
 </head>
 <script src="./vue.js"></script>
-<script src="./dragSelector.umd.js"></script>
-<link rel="stylesheet" href="dragSelector.css">
+<script src="../dist/DragSelector.umd.min.js"></script>
 <body>
 <div id="demo">
     <drag-selector v-model="checkedList"
@@ -48,7 +47,7 @@
 </div>
 </body>
 <script>
-  Vue.use(dragSelector.default);
+  Vue.use(DragSelector);
   new Vue({
     el: '#demo',
     data() {
