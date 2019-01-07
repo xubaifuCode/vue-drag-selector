@@ -1,6 +1,7 @@
 {
   "name": "vue-drag-selector",
   "version": "0.1.0",
+  "main": "./src/index.js",
   "private": false,
   "keywords": [
     "vue",
