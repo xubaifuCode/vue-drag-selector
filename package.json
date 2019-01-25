@@ -20,12 +20,8 @@
   "description": "A simple vue drag selector",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build-lib": "vue-cli-service build --target lib --name DragSelector src/index.js",
+    "build": "vue-cli-service build --target lib --name DragSelector src/index.js",
     "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "vue": "^2.5.17"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.2.2",
@@ -42,7 +38,42 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "block-spacing": [
+        "error",
+        "always"
+      ],
+      "brace-style": [
+        "error",
+        "stroustrup",
+        {
+          "allowSingleLine": true
+        }
+      ],
+      "implicit-arrow-linebreak": [
+        "error",
+        "beside"
+      ],
+      "indent": [
+        2,
+        4
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "ObjectExpression": "always",
+          "ObjectPattern": "never"
+        }
+      ]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

@@ -3,12 +3,17 @@
     <meta charset="utf-8">
     <title>dragSelector demo</title>
     <style>
+        body {
+            background-color: rgb(250, 250, 250);
+        }
+
         #demo {
-            width: 800px;
+            width: 740px;
             height: 300px;
             margin-left: auto;
             margin-right: auto;
-            background-color: #f2f2f2;
+            background: #B3E5FC;
+            border-radius: 4px;
         }
 
         .drag-selector {
@@ -20,14 +25,23 @@
         }
 
         .drag-selector__item {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             margin: 10px;
-            background-color: sandybrown;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #03A9F4;
+            color: white;
         }
 
         .drag-selector__item.selected {
-            background-color: salmon;
+            background-color: #FF4081;
+        }
+
+        .result {
+            background: rgb(248, 238, 248);
         }
     </style>
 </head>
@@ -40,40 +54,46 @@
         <drag-selector-item v-for="(item, index) in myDragList"
                             :value="item"
                             :key="index" class="drag-selector__item">
-            {{ item }}
+            {{ item.name }}
         </drag-selector-item>
     </drag-selector>
-    {{ checkedList }}
+    <div class="result">
+        <div>[<span v-show="!checkedList.length">]</span></div>
+        <div v-for="(item,index) in checkedList" :key="`result${index}`">
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ item }},
+        </div>
+        <div v-show="checkedList.length">]</div>
+    </div>
 </div>
 </body>
 <script>
-  Vue.use(DragSelector);
-  new Vue({
-    el: '#demo',
-    data() {
-      return {
-        checkedList: [],
-        myDragList: [
-          { a: 1, b: 2 },
-          { a: 2, b: 3 },
-          { a: 3, b: 4 },
-          { a: 4, b: 5 },
-          { a: 5, b: 2 },
-          { a: 6, b: 3 },
-          { a: 7, b: 4 },
-          { a: 8, b: 5 },
-          { a: 9, b: 2 },
-          { a: 10, b: 3 },
-          { a: 11, b: 4 },
-          { a: 12, b: 5 }
-        ]
-      };
-    },
-    methods: {
-      handleDragSelectorChange(list) {
-        console.log('list', list);
-      }
-    }
-  });
+    Vue.use(DragSelector);
+    new Vue({
+        el: '#demo',
+        data() {
+            return {
+                checkedList: [],
+                myDragList: [
+                    {name: 'item1'},
+                    {name: 'item2'},
+                    {name: 'item3'},
+                    {name: 'item4'},
+                    {name: 'item5'},
+                    {name: 'item6'},
+                    {name: 'item7'},
+                    {name: 'item8'},
+                    {name: 'item9'},
+                    {name: 'item10'},
+                    {name: 'item11'},
+                    {name: 'item12'}
+                ]
+            };
+        },
+        methods: {
+            handleDragSelectorChange(list) {
+                console.log('list', list);
+            }
+        }
+    });
 </script>
 </html>

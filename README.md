@@ -53,3 +53,7 @@ Vue.use(VueDragSelector);
   };
 </script>
 ```
+
+# 待做（TODO）
+
+1. 拖拽交换位置
