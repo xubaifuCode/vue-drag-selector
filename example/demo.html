@@ -43,6 +43,20 @@
         .result {
             background: rgb(248, 238, 248);
         }
+
+        .back {
+            position: fixed;
+            top: 30px;
+            right: 200px;
+        }
+
+        .back a {
+            padding: 10px 20px;
+            color: white;
+            border-radius: 4px;
+            background-color: #FF4081;
+            text-decoration: none;
+        }
     </style>
 </head>
 <script src="./vue.js"></script>
@@ -63,6 +77,9 @@
             &nbsp;&nbsp;&nbsp;&nbsp;{{ item }},
         </div>
         <div v-show="checkedList.length">]</div>
+    </div>
+    <div class="back">
+        <a href="https://github.com/xubaifuCode/vue-drag-selector">Go Back</a>
     </div>
 </div>
 </body>
