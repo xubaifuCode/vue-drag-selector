@@ -1,6 +1,6 @@
 {
   "name": "vue-drag-selector",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "./dist/DragSelector.umd.min",
   "private": false,
   "homepage": "https://github.com/xubaifuCode/vue-drag-selector",
